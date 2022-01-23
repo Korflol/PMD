@@ -10,17 +10,36 @@ public class Lab2work2 {
     
         System.out.println("What is your age?");
         age = myIn.nextInt();
-        System.out.println("Are you married?");
-        status = myIn.nextLine();
+        myIn.nextLine();
 
-        if(((age >=18) || (age <=30)) && (status == "y")) 
+        if ((age >= 18) && (age <= 30))
         {
-            System.out.println("You can go on the 18-30.");
+            System.out.println("Are you married?");
+            status = myIn.nextLine();
+            if (status.equals("n"))
+            {
+                System.out.println("You can go on the holiday.");
+            }
+            else
+            {
+                if (status.equals("y"))
+                {
+                    System.out.println("You can not go on the holiday as you are married.");
+                }
+            }
         }
         else
         {
-            System.out.println("Sorry you can not go on the holiday for 18-30 and must go with family.");
+            System.out.println("You can not go on the holiday. You do not meet reqs.");
         }
 
     }
+          
 }
+
+
+
+
+
+
+
